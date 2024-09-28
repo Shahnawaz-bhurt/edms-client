@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.3.0-wls122140-b221116.0611 svn-revision#e80cc14f7d7c7ce39446b2db53387251ca55e7a7.-->
+<xsd:schema targetNamespace="http://edmscestg.etisalat.corp.ae/1.0" 
+	xmlns:ns0="http://edmscestg.etisalat.corp.ae/1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="copyDocument">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:copyDocRequest" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="copyDocumentResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:copyDocResponse" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="copySRDocument">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:copySRRequest" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="copySRDocumentResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:copySRResponse" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="downloadEDMSDocument">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:streamDownloadRequest" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="downloadEDMSDocumentResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:streamDownloadResponse" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="downloadMultipleEDMSDocument">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:multipleStreamDownloadRequest" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="downloadMultipleEDMSDocumentResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:multipleStreamDownloadResponse" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getFile">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:fileRequest" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getFileResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:fileResponse" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getMultipleFiles">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:multipleFileRequest" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getMultipleFilesResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:multipleFileResponse" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="updateMultipleProperties">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:updateMultipleRequest" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="updateMultiplePropertiesResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:updateMultipleResponse" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="updateProperties">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:updateRequest" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="updatePropertiesResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:updateResponse" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="uploadCDMSDocument">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:uploadRequest" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="uploadCDMSDocumentResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:uploadResponse" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="uploadEDMSDocument">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:streamUploadRequest" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="uploadEDMSDocumentResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:streamUploadResponse" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="uploadMultipleEDMSDocument">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:multipleStreamUploadRequest" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="uploadMultipleEDMSDocumentResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:multipleStreamUploadResponse" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="copyDocRequest">
+    <xsd:sequence>
+      <xsd:element name="BCRMContactID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BCRMCustomerID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BCRMOrderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BCRMloaID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="accountCat" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="accountNo" type="xsd:long"/>
+      <xsd:element name="areaCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="branch" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="customerId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="dlKey" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docExpDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docNumber" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docOCRResult" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docOcrStatus" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="documentID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="internalNo" type="xsd:long"/>
+      <xsd:element name="manDocVerified" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="partyId" type="xsd:long"/>
+      <xsd:element name="password" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="remarks" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="senderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="serviceType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="smsSC" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="suffix" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="username" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="copyDocResponse">
+    <xsd:sequence>
+      <xsd:element name="copyDocStatus" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorDesc" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="uid" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="copySRRequest">
+    <xsd:sequence>
+      <xsd:element name="dlKey" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="newSR" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="oldSR" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="password" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="remarks" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="username" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="copySRResponse">
+    <xsd:sequence>
+      <xsd:element name="docCount" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorDesc" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="statusObject" type="ns0:statusObject" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="statusObject">
+    <xsd:sequence>
+      <xsd:element name="doctype" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="newSR" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="oldSR" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="remark" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="status" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="uid" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="streamDownloadRequest">
+    <xsd:sequence>
+      <xsd:element name="accountNo" type="xsd:long"/>
+      <xsd:element name="areaCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmContactID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmCustomerID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmLOAID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmOrderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="dlKey" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docCount" type="xsd:int"/>
+      <xsd:element name="docExpDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docNumber" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docOcrStatus" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="documentId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="download" type="xsd:boolean"/>
+      <xsd:element name="extraParams" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="fromDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="partyId" type="xsd:long"/>
+      <xsd:element name="password" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="remarks" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="senderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="smsSC" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="toDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="uid" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="username" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="streamDownloadResponse">
+    <xsd:sequence>
+      <xsd:element name="accountNo" type="xsd:long"/>
+      <xsd:element name="areaCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmContactID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmCustomerID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmLOAID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmOrderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docExpDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docLocation" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docName" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docNumber" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docOcrStatus" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docStream" type="xsd:base64Binary" minOccurs="0"/>
+      <xsd:element name="docType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="documentId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorDesc" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="intDocID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="mimeType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="partyId" type="xsd:long"/>
+      <xsd:element name="remarks" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="totalCount" type="xsd:long"/>
+      <xsd:element name="uid" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="multipleStreamDownloadRequest">
+    <xsd:sequence>
+      <xsd:element name="accountNo" type="xsd:long"/>
+      <xsd:element name="areaCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmContactID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmCustomerID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmLOAID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmOrderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="dlKey" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docCount" type="xsd:int"/>
+      <xsd:element name="docExpDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docNumber" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docOcrStatus" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="documentId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="download" type="xsd:boolean"/>
+      <xsd:element name="extraParams" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="fromDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="partyId" type="xsd:long"/>
+      <xsd:element name="password" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="remarks" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="senderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="smsSC" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="toDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="uid" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="username" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="multipleStreamDownloadResponse">
+    <xsd:sequence>
+      <xsd:element name="documents" type="ns0:streamCDMSDocument" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+      <xsd:element name="errorCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorDesc" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestID" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="streamCDMSDocument">
+    <xsd:sequence>
+      <xsd:element name="accountNo" type="xsd:long" minOccurs="0"/>
+      <xsd:element name="areaCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmContactID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmCustomerID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmLOAID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmOrderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docExpDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docLocation" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docName" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docNumber" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docOcrStatus" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docStream" type="xsd:base64Binary" minOccurs="0"/>
+      <xsd:element name="docType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docURL" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="documentId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorDesc" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="fileName" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="intDocID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="mimeType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="partyId" type="xsd:long" minOccurs="0"/>
+      <xsd:element name="remarks" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="senderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="smsSC" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="uid" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="fileRequest">
+    <xsd:sequence>
+      <xsd:element name="accountNo" type="xsd:long"/>
+      <xsd:element name="areaCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmContactID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmCustomerID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmLOAID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmOrderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="dlKey" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docCount" type="xsd:int"/>
+      <xsd:element name="docExpDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docNumber" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docOcrStatus" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="documentId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="download" type="xsd:boolean"/>
+      <xsd:element name="extraParams" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="fromDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="partyId" type="xsd:long"/>
+      <xsd:element name="password" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="remarks" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="senderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="smsSC" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="toDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="uid" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="username" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="fileResponse">
+    <xsd:sequence>
+      <xsd:element name="accountNo" type="xsd:long"/>
+      <xsd:element name="areaCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmContactID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmCustomerID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmLOAID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docExpDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docLocation" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docName" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docNumber" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docOcrStatus" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="documentId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="documents" type="ns0:cdmsDocument" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+      <xsd:element name="errorCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorDesc" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="intDocID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="partyId" type="xsd:long"/>
+      <xsd:element name="requestID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="totalCount" type="xsd:long"/>
+      <xsd:element name="uid" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="cdmsDocument">
+    <xsd:sequence>
+      <xsd:element name="accountNo" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="areaCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmContactID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmCustomerID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmLOAID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="bcrmOrderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docExpDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docName" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docNum" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docOcrStatus" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docURL" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="documentId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="fileName" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="intDocID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="partyId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="remarks" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="senderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="smsSC" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="uid" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="multipleFileRequest">
+    <xsd:sequence>
+      <xsd:element name="dlKey" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="extraPramas" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="fromDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="password" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestParams" type="ns0:cdmsParamElement" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+      <xsd:element name="requestType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="toDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="username" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="cdmsParamElement">
+    <xsd:sequence>
+      <xsd:element name="accountNo" type="xsd:long"/>
+      <xsd:element name="areaCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docNum" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="id" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="partyId" type="xsd:long"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="multipleFileResponse">
+    <xsd:sequence>
+      <xsd:element name="docLocation" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="documents" type="ns0:cdmsDocument" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+      <xsd:element name="errorCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorDescription" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorDetails" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestParams" type="ns0:cdmsParamElement" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+      <xsd:element name="requestType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="responseCount" type="xsd:int"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="updateMultipleRequest">
+    <xsd:sequence>
+      <xsd:element name="dlKey" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="newPartyId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="oldPartyId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="password" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="username" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="updateMultipleResponse">
+    <xsd:sequence>
+      <xsd:element name="errorCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorDesc" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="newPartyId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="oldPartyId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="updateStatus" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="updatedDocuments" type="xsd:long"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="updateRequest">
+    <xsd:sequence>
+      <xsd:element name="dlKey" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="filterCount" type="xsd:int"/>
+      <xsd:element name="filterName1" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="filterName2" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="filterName3" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="filterName4" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="filterName5" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="filterValue1" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="filterValue2" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="filterValue3" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="filterValue4" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="filterValue5" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="password" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="propertyName" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="propertyValue" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="username" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="updateResponse">
+    <xsd:sequence>
+      <xsd:element name="errorCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorDesc" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="propertyName" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="propertyValue" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="updateStatus" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="updatedDocuments" type="xsd:long"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="uploadRequest">
+    <xsd:sequence>
+      <xsd:element name="BCRMContactID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BCRMCustomerID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BCRMloaID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="accountCat" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="accountNo" type="xsd:long"/>
+      <xsd:element name="areaCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="branch" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="customerId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="dlKey" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docExpDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docName" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docNumber" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docOCRResult" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="documentID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="internalNo" type="xsd:long"/>
+      <xsd:element name="manDocVerified" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="partyId" type="xsd:long"/>
+      <xsd:element name="password" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="remarks" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="senderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="serviceType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="smsSC" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="suffix" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="username" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="uploadResponse">
+    <xsd:sequence>
+      <xsd:element name="errorCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorDesc" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="uid" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="uplaodStatus" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="streamUploadRequest">
+    <xsd:sequence>
+      <xsd:element name="BCRMContactID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BCRMCustomerID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BCRMloaID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="accountCat" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="accountNo" type="xsd:long"/>
+      <xsd:element name="areaCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="branch" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="customerId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="dlKey" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docExpDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docName" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docNumber" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docOCRResult" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docStream" type="xsd:base64Binary" minOccurs="0"/>
+      <xsd:element name="docType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="documentID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="internalNo" type="xsd:long"/>
+      <xsd:element name="manDocVerified" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="partyId" type="xsd:long"/>
+      <xsd:element name="password" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="remarks" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="senderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="serviceType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="smsSC" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="suffix" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="username" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="streamUploadResponse">
+    <xsd:sequence>
+      <xsd:element name="errorCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorDesc" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="uid" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="uplaodStatus" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="multipleStreamUploadRequest">
+    <xsd:sequence>
+      <xsd:element name="BCRMContactID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BCRMCustomerID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BCRMloaID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="accountCat" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="accountNo" type="xsd:long"/>
+      <xsd:element name="areaCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="branch" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="customerId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="dlKey" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docExpDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docName" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docNumber" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docOCRResult" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docStream" type="xsd:base64Binary" minOccurs="0"/>
+      <xsd:element name="docType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="documentID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="internalNo" type="xsd:long"/>
+      <xsd:element name="manDocVerified" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="partyId" type="xsd:long"/>
+      <xsd:element name="password" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="remarks" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="senderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="serviceType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="smsSC" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="suffix" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="username" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="variablePropertiesSet" type="ns0:variablePropertiesSet" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="variablePropertiesSet">
+    <xsd:sequence>
+      <xsd:element name="BCRMContactID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BCRMCustomerID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BCRMloaID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="accountCat" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="accountNo" type="xsd:long"/>
+      <xsd:element name="areaCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="branch" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="customerId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docExpDate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docName" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docNumber" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docOCRResult" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docStream" type="xsd:base64Binary" minOccurs="0"/>
+      <xsd:element name="docType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="documentID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="internalNo" type="xsd:long"/>
+      <xsd:element name="manDocVerified" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="partyId" type="xsd:long"/>
+      <xsd:element name="remarks" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="senderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="serviceType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="smsSC" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="suffix" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="multipleStreamUploadResponse">
+    <xsd:sequence>
+      <xsd:element name="errorCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="errorDesc" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="requestID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="uploadeDocuments" type="ns0:uploadedDocsRes" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="uploadedDocsRes">
+    <xsd:sequence>
+      <xsd:element name="docNumber" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="docUID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="remarks" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="uploadStatus" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="copyDocument" type="ns0:copyDocument"/>
+  <xsd:element name="copyDocumentResponse" type="ns0:copyDocumentResponse"/>
+  <xsd:element name="copySRDocument" type="ns0:copySRDocument"/>
+  <xsd:element name="copySRDocumentResponse" type="ns0:copySRDocumentResponse"/>
+  <xsd:element name="downloadEDMSDocument" type="ns0:downloadEDMSDocument"/>
+  <xsd:element name="downloadEDMSDocumentResponse" type="ns0:downloadEDMSDocumentResponse"/>
+  <xsd:element name="downloadMultipleEDMSDocument" type="ns0:downloadMultipleEDMSDocument"/>
+  <xsd:element name="downloadMultipleEDMSDocumentResponse" type="ns0:downloadMultipleEDMSDocumentResponse"/>
+  <xsd:element name="getFile" type="ns0:getFile"/>
+  <xsd:element name="getFileResponse" type="ns0:getFileResponse"/>
+  <xsd:element name="getMultipleFiles" type="ns0:getMultipleFiles"/>
+  <xsd:element name="getMultipleFilesResponse" type="ns0:getMultipleFilesResponse"/>
+  <xsd:element name="updateMultipleProperties" type="ns0:updateMultipleProperties"/>
+  <xsd:element name="updateMultiplePropertiesResponse" type="ns0:updateMultiplePropertiesResponse"/>
+  <xsd:element name="updateProperties" type="ns0:updateProperties"/>
+  <xsd:element name="updatePropertiesResponse" type="ns0:updatePropertiesResponse"/>
+  <xsd:element name="uploadCDMSDocument" type="ns0:uploadCDMSDocument"/>
+  <xsd:element name="uploadCDMSDocumentResponse" type="ns0:uploadCDMSDocumentResponse"/>
+  <xsd:element name="uploadEDMSDocument" type="ns0:uploadEDMSDocument"/>
+  <xsd:element name="uploadEDMSDocumentResponse" type="ns0:uploadEDMSDocumentResponse"/>
+  <xsd:element name="uploadMultipleEDMSDocument" type="ns0:uploadMultipleEDMSDocument"/>
+  <xsd:element name="uploadMultipleEDMSDocumentResponse" type="ns0:uploadMultipleEDMSDocumentResponse"/>
+</xsd:schema>
